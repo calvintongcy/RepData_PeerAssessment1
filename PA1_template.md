@@ -23,7 +23,7 @@ total.steps <- tapply(data$steps, data$date, FUN=sum, na.rm=TRUE)
 qplot(total.steps, binwidth=1000, xlab="total number of steps taken each day")
 ```
 
-![](Preview-200c4d2d62ec_files/figure-html/unnamed-chunk-1-1.png) 
+![plot of chunk unnamed-chunk-1](instructions_fig/unnamed-chunk-1.png) 
 
 ```r
 mean(total.steps, na.rm=TRUE)
@@ -53,7 +53,7 @@ ggplot(data=averages, aes(x=interval, y=steps)) +
     ylab("average number of steps taken")
 ```
 
-![](Preview-200c4d2d62ec_files/figure-html/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-2](instructions_fig/unnamed-chunk-2.png) 
 
 On average across all the days in the dataset, the 5-minute interval contains
 the maximum number of steps?
@@ -109,7 +109,7 @@ total.steps <- tapply(filled.data$steps, filled.data$date, FUN=sum)
 qplot(total.steps, binwidth=1000, xlab="total number of steps taken each day")
 ```
 
-![](Preview-200c4d2d62ec_files/figure-html/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](instructions_fig/unnamed-chunk-5.png) 
 
 ```r
 mean(total.steps)
@@ -162,4 +162,4 @@ ggplot(averages, aes(interval, steps)) + geom_line() + facet_grid(day ~ .) +
     xlab("5-minute interval") + ylab("Number of steps")
 ```
 
-![](Preview-200c4d2d62ec_files/figure-html/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](instructions_fig/unnamed-chunk-7.png) 
